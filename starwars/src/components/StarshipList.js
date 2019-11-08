@@ -12,9 +12,9 @@ const StarshipList = props => {
 
     useEffect(() => {
         axios
-            .get(`${props.starships}`)
+            .get(`${props.starships.map(function (starship, index){return starship})}`)
             .then(response => {
-                setStarship(response.data.results);
+                // setStarship(response.data.forEach(function(starship, index){return starship}));
                 console.log(response.data);
             })
             .catch(error => {
@@ -26,6 +26,7 @@ const StarshipList = props => {
          {/* {starship.map((starship, index) => {
              return <div> {starship} </div>
          })} */}
+         {/* {starship} */}
         </div>
     );
   };

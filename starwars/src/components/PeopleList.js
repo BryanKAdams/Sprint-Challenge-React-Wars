@@ -39,24 +39,23 @@ export default function PeopleList() {
             })
             .catch(error => {
                 console.log("The data was not returned", error)
-                setPage(page -1);
+                setPage(page - 1);
             })
     }, [page])
     return (
         <div>
-            
+
             <EntryDiv className="entry">
                 {people.map((people, index) => {
                     return <PeopleCard key={index} name={people.name} height={people.height} mass={people.mass} hair_color={people.hair_color} skin_color={people.skin_color} species={people.species} starships={people.starships} vehicles={people.vehicles} />
-                    
+
                 })}
                   {people.map((people, index) => {
-                    return <StarshipList key={index} starships={people.starships} />
-                    
-                })}
+                    return <StarshipList key={index} starships={people.starships}  />
 
+                })}
             </EntryDiv>
-            { page !== 1 ? (<div><PrettyButton onClick={() => setPage(page -1)}>Previous</PrettyButton> <PrettyButton onClick={() => setPage(page +1)}>Next</PrettyButton> </div>):(<div><PrettyButton onClick={() => setPage(page + 1)}>Next</PrettyButton></div>)}
+            {page !== 1 ? (<div><PrettyButton onClick={() => setPage(page - 1)}>Previous</PrettyButton> <PrettyButton onClick={() => setPage(page + 1)}>Next</PrettyButton> </div>) : (<div><PrettyButton onClick={() => setPage(page + 1)}>Next</PrettyButton></div>)}
         </div>
     )
 
