@@ -15,7 +15,7 @@ const StarshipList = props => {
             .get(`${props.starships.map(function (starship, index){return starship})}`)
             .then(response => {
                 // setStarship(response.data.forEach(function(starship, index){return starship}));
-                console.log(response.data);
+                console.log(response.data.name);
             })
             .catch(error => {
                 console.log("The data was not returned", error)
@@ -23,10 +23,7 @@ const StarshipList = props => {
     }, [])
     return (
         <div>
-         {/* {starship.map((starship, index) => {
-             return <div> {starship} </div>
-         })} */}
-         {/* {starship} */}
+         {console.log(props.starships.map(function (starship, index){return starship}))}
         </div>
     );
   };

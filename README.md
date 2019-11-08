@@ -24,15 +24,18 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+1. What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] Describe state.
+1. What does it mean to think in react? Think of everything visually as components. React is the Visual in MVC
 
-- [ ] Describe props.
+1. Describe state. Set initial value that can be modified in react 
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+1. Describe props. Properties that can be passed into different components.
+
+1. What are side effects, and how do you sync effects in a React component to state or prop changes? A hook that tells react until
+the render is complete to complete an action. Anything that affects something outside the scope of the function being executed.
+
 
 ## Project Set Up
 
